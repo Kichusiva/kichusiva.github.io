@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+             form{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-color:rgb(167, 167, 167);
+        padding: 20px 30px;
+        overflow: hidden;
+        width: 345px;
+        border-radius: 15px;
+        top: 10px;
+        border: 1px solid rgb(141, 141, 141);
+        top: 30px;
+        position: relative;
+        }
+body{
+    background-color: darkgrey;
+}
+    </style>
+</head>
+<body>
+    <center>
+        <form action="mailto:sivanarayankv@gmail.com"method="post"enctype="text/plain">
+        <label for="name">minecraft name</label>
+        <input class="fil" type="text"name="minecraft name="placeholder="enter your minecraft name="required>
+        <label for="name">discord id</label>
+        <input class="fil" type="text"name="discord id="placeholder="enter your dc id name="required>
+        <label for="name">what is your talent</label>
+        <input class="fil" type="text"name="what is your talent ="placeholder="enter your talent="required>
+        <label for="name">email</label>
+        <input class="fil" type="text"name= "email="placeholder="enter your email id="required>
+        <label for="message"></label>
+        <label for="name">do you have youtube channel </label>
+        <input class="fil" type="text"name=" email="placeholder="enter your youtube channel link.if have ="required>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="why do you need play in our server"></textarea>
+        <button class="click">Submit &#10132;</button>
+    </form>
+    <br>
+        <p>* look dc channel"whitelist accepeted"after 24 hours</p>
+</center>
+<script>
+      
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you! your form is submitted successfully.we will email to your email id" ))
+        .then(() => {  window.location.reload(); })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+<br>
+</body>
+</html>
