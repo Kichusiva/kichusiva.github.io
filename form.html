@@ -11,7 +11,7 @@
         flex-direction: column;
         position: relative;
         overflow: hidden;
-        background-color:rgb(167, 167, 167);
+        background-color:blue;
         padding: 20px 30px;
         overflow: hidden;
         width: 345px;
@@ -29,25 +29,25 @@ body{
 <body>
     <center>
         <form action="mailto:sivanarayankv@gmail.com"method="post"enctype="text/plain">
-        <label for="name">minecraft name</label>
-        <input class="fil" type="text"name="minecraft name="placeholder="enter your minecraft name="required>
-        <label for="name">discord id</label>
-        <input class="fil" type="text"name="discord id="placeholder="enter your dc id name="required>
-        <label for="name">what is your talent</label>
-        <input class="fil" type="text"name="what is your talent ="placeholder="enter your talent="required>
+        <label for="name">website Name</label>
+        <input class="fil" type="text"name="website name="placeholder="enter your website name="required>
+        <label for="name">Name</label>
+        <input class="fil" type="text"name=" name="placeholder="enter your  name="required>
+        <label for="name">phone no</label>
+        <input class="fil" type="text"name=" phone no="placeholder="enter your phone no="required>
         <label for="name">email</label>
-        <input class="fil" type="text"name= "email="placeholder="enter your email id="required>
+        <input class="fil" type="text"name=" email="placeholder="enter your email id="required>
         <label for="message"></label>
-        <label for="name">do you have youtube channel </label>
-        <input class="fil" type="text"name=" email="placeholder="enter your youtube channel link.if have ="required>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="why do you need play in our server"></textarea>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="any addon to add plz type here "></textarea>
         <button class="click">Submit &#10132;</button>
     </form>
     <br>
-        <p>* look dc channel"whitelist accepeted"after 24 hours</p>
+        <p>* we will send email to you email id if we accecpted your request. if  dont get email 24-48hours your request is canceled</p>
 </center>
 <script>
-      
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz4QUtjWB_k63zg4EmVPhWrHy1D3N6M8WtRSKR8XNqpo9yAuEJZhUROqn9SBbexwTMi/exec'
+    const form = document.forms['product']
+  
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
